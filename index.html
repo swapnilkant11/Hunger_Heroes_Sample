@@ -1,9 +1,89 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-    </head>
-    <body>
-     <div></div>   
-    </body>
+<head>
+  <title>test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  
+
+</head>
+
+<body>
+
+
+
+  <div class="content" style=" max-width:100%" >
+      <h2 class="heading"  ><span onmouseover="mOver(this)" onmouseout="mOut(this)"> ह</span>UNGER <span onmouseover="mOver(this)" onmouseout="mOut(this)"> ह</span>EROES</h2>
+      <img class="Slides" src="https://images.unsplash.com/photo-1499028344343-cd173ffc68a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" style="width:100%">
+      <img class="Slides" src="https://cdn.pixabay.com/photo/2018/03/07/18/42/menu-3206749_1280.jpg" style="width:100%">
+      <img class="Slides" src="https://cdn.pixabay.com/photo/2017/02/15/10/39/food-2068217_1280.jpg" style="width:100%">
+      <img class="Slides" src="https://cdn.pixabay.com/photo/2014/06/11/17/00/cook-366875_1280.jpg" style="width:100%">
+      <div class="button">
+        <button class="left" onclick="plusDivs(-1)" >&#10094;</button>
+        <button class="right" onclick="plusDivs(1)" >&#10095;</button>
+      </div>
+
+  </div>
+
+
+ 
+
+</body>
+<script>
+  var index = 0;
+  scroll();
+
+  function scroll() {
+    var i;
+    var x = document.getElementsByClassName("Slides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+  index++;
+  if (index > x.length) {index = 1}    
+  x[index-1].style.display = "block";  
+  setTimeout(scroll, 4000); // Change image every 2 seconds
+  }
+
+
+  var slideIndex = 1;
+    showDivs(slideIndex);
+
+  function plusDivs(n) {
+    showDivs(slideIndex += n);
+  }
+
+  function showDivs(n) {
+    var i;
+    var x = document.getElementsByClassName("Slides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    x[slideIndex-1].style.display = "block";  
+  }
+  function mOver(obj) {
+   obj.innerHTML = "H"
+}
+
+function mOut(obj) {
+  obj.innerHTML = "ह"
+}
+function colorchange(){
+    var col=["#922B21","#9B59B6","#5DADE2","#2ECC71","#F1C40F","#E67E22","#283747","#17202A"];
+    
+    
+    var  randomNum = (Math.floor(Math.random()*10))%8;
+    var randomColor = col[randomNum];
+    document.getElementsByClassName("heading")[0].style.color=randomColor;
+  }
+  setInterval(colorchange,2000);
+
+
+
+ 
+  
+</script>
 </html>
