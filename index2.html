@@ -71,11 +71,18 @@
 function mOut(obj) {
   obj.innerHTML = "ह"
 }
+function colorchange(){
+    var col=["#922B21","#9B59B6","#5DADE2","#2ECC71","#F1C40F","#E67E22","#283747","#17202A"];
+    
+    
+    var  randomNum = (Math.floor(Math.random()*10))%8;
+    var randomColor = col[randomNum];
+    document.getElementsByClassName("heading")[0].style.color=randomColor;
+  }
+  setInterval(colorchange,2000);
 
-color=["#922B21","#9B59B6","#5DADE2","#2ECC71","#F1C40F","#E67E22","#283747","#17202A"];
-randomNum = (Math.floor(Math.random()*10))%8;
-randomColor = color[randomNum];
-document.getElementsByClassName("heading").style.color=randomColor;
+
+
  
   
 </script>
