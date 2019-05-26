@@ -1,0 +1,57 @@
+button{
+    text-decoration: none;
+}
+.Slides {
+    display:none;
+    height: 650px;
+    
+}
+.content{
+    position: relative;
+    
+}
+.heading{
+    position: absolute;
+    top: 30%;
+    right: 0;
+    bottom: 0;
+    left :0;
+    margin: auto;
+    
+    font-size: 125px;
+    text-align: center;
+   
+    -webkit-text-stroke: 5px white;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+span{
+    font-size: 200px;
+}
+.left{
+    position: absolute;
+    top:50%;
+    left:2%;
+    padding: 10px 10px;
+    font-size: larger;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 8px;
+    
+}
+.left:hover{
+    opacity: 0.5;
+}
+.right{
+    position: absolute;
+    top:50%;
+    right:2%;
+    padding: 10px 10px;
+    font-size: larger;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 8px;
+}
+.right:hover{
+    opacity: 0.5;
+}
